@@ -59,10 +59,10 @@ def create_tables() -> None:
 def user_lookup_callback(_jwt_header, jwt_data):
   identity = jwt_data["sub"]
   print(f"identity: {identity}")
-  return UserModel.find_by_id(id=identity)
+  return UserModel.find_by_attribute(id=identity)
 
 
-api.add_resource(Car, '/car/<string:plate>')
+api.add_resource(Car, '/car/<string:license_plate>')
 api.add_resource(CarList, '/cars')
 api.add_resource(Driver, '/driver')
 api.add_resource(AssignDriverToCar, '/assign')

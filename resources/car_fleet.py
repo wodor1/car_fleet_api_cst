@@ -17,8 +17,8 @@ class CarFleet(Resource):
 
   def post(self):
     data = CarFleet.parser.parse_args()
-    car = CarModel.find_by_id(data['car_id'])
-    fleet = FleetModel.find_by_id(data['fleet_id'])
+    car = CarModel.find_by_attribute(id=data['car_id'])
+    fleet = FleetModel.find_by_attribute(id=data['fleet_id'])
 
     if not car:
       return {'message': 'Car not found.'}, 404
@@ -26,7 +26,7 @@ class CarFleet(Resource):
     if not fleet:
       return {'message': 'Fleet not found.'}, 404
 
-    if CarFleetLink.link_exists(car.id, fleet.id):
+    if CarFleetLink.find_by_attribute(car_id=car.id, fleet_id=fleet.id):
       return {'message': 'Car already assigned to fleet.'}, 400
 
     car_fleet_link = CarFleetLink(car.id, fleet.id)
