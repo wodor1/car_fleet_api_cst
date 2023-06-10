@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "4eb1bbac-27a5-4469-99a1-a71f67f97077",
-		"name": "car_fleet_goodie",
+		"name": "Postman_car_fleet",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26051985"
 	},
@@ -40,7 +40,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"license_plate\": \"abc-124\",\r\n    \"type\": \"peugeot\"\r\n}\r\n",
+							"raw": "{\r\n    \"license_plate\": \"abc-888\",\r\n    \"type\": \"peugeot\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -155,7 +155,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"username\": \"Gézuka\", \"password\": \"12345\"}",
+							"raw": "{\"username\": \"Tomi\", \"password\": \"5555\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -209,7 +209,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"username\": \"Zsolt\", \"password\": \"12345\"}",
+							"raw": "{\"username\": \"Lali\", \"password\": \"5555\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -270,7 +270,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NjM5NjMyNywianRpIjoiYWIxZTE2ZTgtZGFkYS00MDI2LTllMjctZjhhNjg3MTE5Y2E3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjg2Mzk2MzI3LCJleHAiOjE2ODYzOTgxMjd9.agzasVBQ03jXTP0PYArhYWEu4wlGIKceVC_bxNKidsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NjQzMDI3NCwianRpIjoiNTBkNjkwMzAtYjgyYS00YjkxLWI5MDUtYjc4NDE4Y2I3YjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjg2NDMwMjc0LCJleHAiOjE2ODY0MzIwNzR9.eb0ltTPRRCPUenZ8MRaH4WMx6v2E9KhRomg9XJa51kI",
 									"type": "string"
 								}
 							]
@@ -334,7 +334,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NjM5NjMyNywianRpIjoiYWIxZTE2ZTgtZGFkYS00MDI2LTllMjctZjhhNjg3MTE5Y2E3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjg2Mzk2MzI3LCJleHAiOjE2ODYzOTgxMjd9.agzasVBQ03jXTP0PYArhYWEu4wlGIKceVC_bxNKidsg",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NjQzMDI3NCwianRpIjoiNTBkNjkwMzAtYjgyYS00YjkxLWI5MDUtYjc4NDE4Y2I3YjJhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjg2NDMwMjc0LCJleHAiOjE2ODY0MzIwNzR9.eb0ltTPRRCPUenZ8MRaH4WMx6v2E9KhRomg9XJa51kI",
 									"type": "string"
 								}
 							]
@@ -386,7 +386,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\": \"Johnny Bravo\"}",
+							"raw": "{\"name\": \"Szasza\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -441,7 +441,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"driver_id\": 1, \"car_id\":1}",
+							"raw": "{\"driver_id\": 1, \"car_id\":2}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -731,7 +731,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"car_id\": 1,\r\n    \"fleet_id\": 2\r\n}",
+							"raw": "{\r\n    \"car_id\": 1,\r\n    \"fleet_id\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -789,7 +789,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/car/abc-123",
+							"raw": "http://127.0.0.1:5000/car/abc-124",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -800,7 +800,123 @@
 							"port": "5000",
 							"path": [
 								"car",
-								"abc-123"
+								"abc-124"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Save car position test\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.response.to.have.status(201);\r",
+									"\r",
+									"    pm.expect(jsonData).to.have.property('message');\r",
+									"    pm.expect(jsonData.message).to.eql('position was saved');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NjM5NjMyNywianRpIjoiYWIxZTE2ZTgtZGFkYS00MDI2LTllMjctZjhhNjg3MTE5Y2E3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjg2Mzk2MzI3LCJleHAiOjE2ODYzOTgxMjd9.agzasVBQ03jXTP0PYArhYWEu4wlGIKceVC_bxNKidsg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitude\": 47.515704,\r\n    \"longitude\": 19.206073\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/car/abc-124/position",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"car",
+								"abc-124",
+								"position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/car/abc-124/position",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"car",
+								"abc-124",
+								"position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete assign",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"driver_id\": 1,\r\n  \"car_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/assign",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"assign"
 							]
 						}
 					},
