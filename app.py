@@ -9,6 +9,7 @@ from models.driver import DriverModel
 from models.fleet import FleetModel
 from models.car_fleet import CarFleetLink
 from models.user import UserModel
+from models.car_position import PositionModel
 
 from resources.car import Car, CarList
 from resources.driver import Driver
@@ -18,6 +19,7 @@ from resources.fleet import Fleet, FleetList
 from resources.register import UserRegister
 from resources.auth import Auth
 from resources.user import User
+from resources.car_position import CarPosition
 from db import db
 
 db_path: str = os.path.join(os.path.dirname(__file__), 'data.db')
@@ -72,3 +74,5 @@ api.add_resource(FleetList, '/fleets')
 api.add_resource(UserRegister, '/register')
 api.add_resource(Auth, '/auth')
 api.add_resource(User, '/user')
+api.add_resource(CarPosition, '/car/<int:id>/position')
+
