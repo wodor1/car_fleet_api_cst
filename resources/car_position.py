@@ -13,8 +13,8 @@ class CarPosition(Resource):
                         required=True,
                         help='This field cannot be left blank')
 
-    def post(self, id):
-        car = CarModel.find_by_attribute(id=id)
+    def post(self, plate):
+        car = CarModel.find_by_attribute(license_plate=plate)
 
         if not car:
             return {'message': 'Car not found.'}, 404
@@ -25,3 +25,11 @@ class CarPosition(Resource):
         car_position.save_to_db()
 
         return {'message': 'position was saved'}, 201
+
+    def get(self, plate):
+        car = CarModel.find_by_attribute(license_plate=plate)
+        if not car:
+            return {'message': 'Car not found.'}, 404
+
+        positions = [position.json() for position in car.positions]
+        return {'positions': positions}, 200

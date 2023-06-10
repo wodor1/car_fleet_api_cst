@@ -7,7 +7,7 @@ class PositionModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     car_id = db.Column(db.Integer, db.ForeignKey('cars.id'))
-    car = db.relationship('CarModel')
+    car = db.relationship('CarModel', backref='positions')
     latitude = db.Column(db.Float(precision=5))
     longitude = db.Column(db.Float(precision=5))
     date = db.Column(db.DateTime, default=now)
@@ -21,3 +21,12 @@ class PositionModel(db.Model):
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()
+
+    def json(self):
+        return {
+            'id': self.id,
+            'car_id': self.car_id,
+            'latitude': self.latitude,
+            'longitude': self.longitude,
+            'date': self.date.isoformat()
+        }

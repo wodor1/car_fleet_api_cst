@@ -74,5 +74,5 @@ api.add_resource(FleetList, '/fleets')
 api.add_resource(UserRegister, '/register')
 api.add_resource(Auth, '/auth')
 api.add_resource(User, '/user')
-api.add_resource(CarPosition, '/car/<int:id>/position')
+api.add_resource(CarPosition, '/car/<string:plate>/position')
 
